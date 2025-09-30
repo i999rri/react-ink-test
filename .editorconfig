@@ -1,0 +1,71 @@
+# EditorConfig is awesome: https://EditorConfig.org
+# Microsoft TypeScript および Facebook React リポジトリの設定を参考に作成
+
+# トップレベルのEditorConfigファイル
+root = true
+
+# 全てのファイルに適用される基本ルール
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+max_line_length = 80
+
+# TypeScript/JavaScript ファイル（React/TypeScriptの推奨設定）
+[*.{ts,tsx,js,jsx}]
+indent_style = space
+indent_size = 2
+max_line_length = 80
+
+# JSON ファイル
+[*.json]
+indent_style = space
+indent_size = 2
+
+# YAML ファイル
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# Markdown ファイル（末尾の空白を保持、行長制限なし）
+[*.md]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = false
+max_line_length = 0
+
+# HTML ファイル
+[*.html]
+indent_style = space
+indent_size = 2
+
+# CSS/SCSS ファイル
+[*.{css,scss,sass}]
+indent_style = space
+indent_size = 2
+
+# 設定ファイル
+[*.{eslintrc,prettierrc}]
+indent_style = space
+indent_size = 2
+
+# 特定の設定ファイル
+[{package.json,.travis.yml}]
+indent_style = space
+indent_size = 2
+
+# Gradle ファイル（Android開発など）
+[*.gradle]
+indent_style = space
+indent_size = 4
+
+# Makefile（タブが必要）
+[Makefile]
+indent_style = tab
+
+# Gitのコミットメッセージ（行長制限なし）
+[COMMIT_EDITMSG]
+max_line_length = 0

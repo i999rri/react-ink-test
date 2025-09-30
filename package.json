@@ -1,0 +1,63 @@
+{
+	"name": "ink-cli-test",
+	"version": "0.0.0",
+	"license": "MIT",
+	"bin": "dist/cli.js",
+	"type": "module",
+	"engines": {
+		"node": ">=16"
+	},
+	"scripts": {
+		"build": "vite build && chmod +x dist/cli.js",
+		"dev": "vite build --watch",
+		"test": "prettier --check . && xo && ava",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write .",
+		"format": "biome format --write ."
+	},
+	"files": [
+		"dist"
+	],
+	"dependencies": {
+		"ink": "^6.3.1",
+		"ink-text-input": "^6.0.0",
+		"meow": "^11.0.0",
+		"react": "^19.1.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.2.4",
+		"@sindresorhus/tsconfig": "^3.0.1",
+		"@types/react": "^19.1.13",
+		"@vdemedes/prettier-config": "^2.0.1",
+		"@vitejs/plugin-react": "^5.0.4",
+		"ava": "^5.2.0",
+		"chalk": "^5.2.0",
+		"eslint-config-xo-react": "^0.27.0",
+		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"ink-testing-library": "^3.0.0",
+		"prettier": "^2.8.7",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.0.3",
+		"vite": "^7.1.7",
+		"vite-plugin-node": "^7.0.0",
+		"xo": "^0.53.1"
+	},
+	"ava": {
+		"extensions": {
+			"ts": "module",
+			"tsx": "module"
+		},
+		"nodeArguments": [
+			"--loader=ts-node/esm"
+		]
+	},
+	"xo": {
+		"extends": "xo-react",
+		"prettier": true,
+		"rules": {
+			"react/prop-types": "off"
+		}
+	},
+	"prettier": "@vdemedes/prettier-config"
+}

@@ -1,0 +1,16 @@
+{
+	"extends": "@sindresorhus/tsconfig",
+	"compilerOptions": {
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"jsx": "react-jsx",
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"allowImportingTsExtensions": false,
+		"noEmit": false
+	},
+	"include": ["src/**/*.ts", "src/**/*.tsx"],
+	"typescript.preferences.includePackageJsonAutoImports": "off"
+}
